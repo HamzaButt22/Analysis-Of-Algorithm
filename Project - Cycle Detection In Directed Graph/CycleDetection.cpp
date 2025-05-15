@@ -2,6 +2,7 @@
 #include <vector>
 #include <queue>
 using namespace std;
+
 class Graph
 {
     int V;
@@ -113,16 +114,7 @@ int main()
     {
         int u, v;
         cin >> u >> v;
-        if (u >= 0 && u < V && v >= 0 && v < V)
-        {
-            g.addEdge(u, v);
-        }
-        else
-        {
-            cout << "❌ Invalid edge: " << u << " -> " << v
-                 << " (vertex out of range 0 to " << (V - 1) << "). Please re-enter this edge.\n";
-            --i; // Decrement i to repeat this iteration
-        }
+        g.addEdge(u, v);
     }
 
     g.printGraph();
